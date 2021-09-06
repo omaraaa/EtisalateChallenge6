@@ -1,33 +1,17 @@
 import Dashboard from '../components/Dashboard'
 import { useState, useEffect, useRef } from 'react'
 import styles from '../styles/Home.module.css'
-import TestChart from '../components/TestChart'
+import TestWidget from '../components/widgets/TestWidget'
+import Widget from '../components/Widget'
+import AddWidgetBtn from '../components/AddWidgetBtn'
 
 
 export default function Home() {
   return <Dashboard>
-    <h1 className="text-6xl font-bold m-4">
-      Example
-    </h1>
-
-
-
-    <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
-      <a
-        className={styles.card}
-      >
-        <div>
-          <h3 className="text-2xl font-bold whitespace-nowrap">Adjustments &rarr;</h3>
-          <p className="mt-4 text-xl">
-            description
-          </p>
-        </div>
-
-        <TestChart></TestChart>
-
-      </a>
-
-    </div>
+    <TestWidget></TestWidget>
+    <TestWidget></TestWidget>
+    <TestWidget></TestWidget>
+    <AddWidgetBtn />
   </Dashboard>
 }
 
